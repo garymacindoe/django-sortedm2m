@@ -9,8 +9,8 @@
     margin: 0;
 }
 
-.sortedm2m-container p.selector-filter input {
-    width: 532px;
+.sortedm2m-container p.selector-filter input[type=text] {
+    width: 512px;
     margin: 5px 4px;
 }
 
