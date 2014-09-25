@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls.defaults import *
+import django
+if django.VERSION >= (1, 6):
+    from django.conf.urls import patterns, url, include
+else:
+    from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
 from django.http import HttpResponse
