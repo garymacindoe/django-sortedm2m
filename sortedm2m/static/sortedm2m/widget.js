@@ -89,10 +89,7 @@ if (jQuery === undefined) {
         }
 
         $('div.sortedm2m-container #sortedm2m-select_all').change(function(event) {
-        	$(event.target).parents('div.sortedm2m-container').children('ul').find('input[type=checkbox]').each(function(index, input) {
-        		input.checked = event.target.checked;
-        	})
-        	
+        	$(event.target).parents('div.sortedm2m-container').children('ul').find('input[type=checkbox]').prop('checked', this.checked).trigger('change');
         });
     });
 })(jQuery);
